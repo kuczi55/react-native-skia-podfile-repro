@@ -8,7 +8,12 @@
     "ios": "npx expo run:ios",
     "web": "expo start --web",
     "pod": "pod install --project-directory=ios",
-    "reset-project": "node ./src/scripts/reset-project.js"
+    "reset-project": "node ./src/scripts/reset-project.js",
+    "clean-gradle": "android/gradlew -p android clean || true",
+    "clean-modules": "rm -rf node_modules",
+    "clean-android": "yarn clean-gradle && rm -rf android/build android/app/build android/.gradle",
+    "clean-ios": "rm -rf ios/build ios/Pods",
+    "clean-project": "yarn clean-android && yarn clean-ios && yarn clean-modules"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.0",
