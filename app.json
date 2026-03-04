@@ -9,13 +9,15 @@
     "newArchEnabled": true,
     "scheme": "reactnativeskiapodfilerepro",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.react-native-skia-podfile-repro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.reactnativeskiapodfilerepro"
     },
     "web": {
       "favicon": "src/assets/images/favicon.png"

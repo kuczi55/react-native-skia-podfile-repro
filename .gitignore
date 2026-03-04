@@ -36,3 +36,13 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# Cursor
+.cursor/
+
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions

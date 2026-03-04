@@ -16,37 +16,26 @@ It includes the following:
 - Expo [Development Build](https://docs.expo.dev/develop/development-builds/introduction/) with [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)
 - Edge-to-edge configured on Android with [`react-native-edge-to-edge`](https://www.npmjs.com/package/react-native-edge-to-edge)
 
-## Getting Started
-
-1. Create a new project using this template:
-
-   ```sh
-   npx create-expo-app --example with-react-navigation
-   yarn create expo-app --example with-react-navigation
-   pnpm create expo-app --example with-react-navigation
-   bun create expo-app --example with-react-navigation
-   ```
-
 ## Running the app
 
 - Install the dependencies:
 
   ```sh
-  npx expo install
+  yarn install
   ```
 
 - Start the development server:
 
   ```sh
-  npx expo start
+  yarn start
   ```
 
 - Build and run iOS and Android development builds:
 
   ```sh
-  npm run ios
+  yarn ios
   # or
-  npm run android
+  yarn android
   ```
 
 - In the terminal running the development server, press `i` to open the iOS simulator, `a` to open the Android device or emulator, or `w` to open the web browser.

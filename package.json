@@ -4,9 +4,10 @@
   "main": "index.tsx",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "npx expo run:android",
+    "ios": "npx expo run:ios",
     "web": "expo start --web",
+    "pod": "pod install --project-directory=ios",
     "reset-project": "node ./src/scripts/reset-project.js"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "expo-asset": "~12.0.3",
     "expo-blur": "~15.0.2",
     "expo-constants": "~18.0.3",
+    "expo-dev-client": "~6.0.20",
     "expo-font": "~14.0.2",
     "expo-haptics": "~15.0.2",
     "expo-image": "~3.0.2",
@@ -44,5 +46,6 @@
     "eslint-config-expo": "~10.0.0",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": true,
+  "packageManager": "yarn@4.13.0"
 }
