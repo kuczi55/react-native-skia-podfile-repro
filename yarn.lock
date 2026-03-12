@@ -2237,7 +2237,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shopify/react-native-skia@npm:^2.5.1":
+"@shopify/react-native-skia@npm:2.5.1":
   version: 2.5.1
   resolution: "@shopify/react-native-skia@npm:2.5.1"
   dependencies:
@@ -2259,6 +2259,31 @@ __metadata:
   bin:
     setup-skia-web: scripts/setup-canvaskit.js
   checksum: 10c0/8323b673a258567f73ce960ab9387c0c2d703fb28eb1ae5efba08c52f0e211d947a0c057edc8a6ce9ae25b3a81be63d948f642f0edf091b367af68c567fd56e3
+  languageName: node
+  linkType: hard
+
+"@shopify/react-native-skia@patch:@shopify/react-native-skia@npm%3A2.5.1#~/.yarn/patches/@shopify-react-native-skia-npm-2.5.1-6e60592a08.patch":
+  version: 2.5.1
+  resolution: "@shopify/react-native-skia@patch:@shopify/react-native-skia@npm%3A2.5.1#~/.yarn/patches/@shopify-react-native-skia-npm-2.5.1-6e60592a08.patch::version=2.5.1&hash=eb8006"
+  dependencies:
+    canvaskit-wasm: "npm:0.40.0"
+    react-native-skia-android: "npm:144.3.0"
+    react-native-skia-apple-ios: "npm:144.3.0"
+    react-native-skia-apple-macos: "npm:144.3.0"
+    react-native-skia-apple-tvos: "npm:144.3.0"
+    react-reconciler: "npm:0.31.0"
+  peerDependencies:
+    react: ">=19.0"
+    react-native: ">=0.78"
+    react-native-reanimated: ">=3.19.1"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-reanimated:
+      optional: true
+  bin:
+    setup-skia-web: scripts/setup-canvaskit.js
+  checksum: 10c0/c8f0838d26566ec017590667f0be274e06615c045e0744099ee6e2b75f58a17a84015e51905f9f917c8f7e1c3d64308879e762b377b1c04bb7af0937fbeceebc
   languageName: node
   linkType: hard
 
@@ -8000,7 +8025,7 @@ __metadata:
     "@react-navigation/elements": "npm:^2.6.3"
     "@react-navigation/native": "npm:^7.1.8"
     "@react-navigation/native-stack": "npm:^7.3.16"
-    "@shopify/react-native-skia": "npm:^2.5.1"
+    "@shopify/react-native-skia": "patch:@shopify/react-native-skia@npm%3A2.5.1#~/.yarn/patches/@shopify-react-native-skia-npm-2.5.1-6e60592a08.patch"
     "@types/react": "npm:~19.1.0"
     eslint: "npm:^9.25.0"
     eslint-config-expo: "npm:~10.0.0"

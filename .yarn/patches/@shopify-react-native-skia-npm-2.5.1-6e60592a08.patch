@@ -1,0 +1,18 @@
+diff --git a/react-native-skia.podspec b/react-native-skia.podspec
+index 5f0fc406440fbf496232114abd44757d33995eab..c1f6d0f54fa9c7b9aadf079d10d99d4a333312a2 100644
+--- a/react-native-skia.podspec
++++ b/react-native-skia.podspec
+@@ -26,8 +26,11 @@ framework_names = ['libskia', 'libsvg', 'libskshaper', 'libskparagraph',
+ # Build platform-specific framework paths (relative to pod's libs directory)
+ ios_frameworks = framework_names.map { |f| "libs/ios/#{f}.xcframework" }
+ osx_frameworks = framework_names.map { |f| "libs/macos/#{f}.xcframework" }
+-# tvOS frameworks - only declare if libs/tvos/ already exists (otherwise leave empty)
+-tvos_frameworks = if use_graphite || !Dir.exist?(File.join(__dir__, 'libs', 'tvos'))
++# tvOS frameworks - declare based on npm package presence (otherwise leave empty)
++has_tvos_package = !use_graphite && (
++  system('node -e "try { require.resolve(\'react-native-skia-apple-tvos/package.json\'); process.exit(0) } catch (e) { process.exit(1) }"', chdir: __dir__)
++)
++tvos_frameworks = if use_graphite || !has_tvos_package
+   []
+ else
+   framework_names.map { |f| "libs/tvos/#{f}.xcframework" }
